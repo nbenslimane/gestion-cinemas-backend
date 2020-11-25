@@ -47,7 +47,7 @@ public class CinemaInitServiceImpl implements IinterfaceInitCinema {
     @Override
     public void initCinemas() {
      villeRepository.findAll().forEach(v->{
-         Stream.of("Collize","CinemaPalace","BizerteCinema","SfaxCinema").forEach(c->{
+         Stream.of("Cinema ABC","Cinéma Théâtre le RIO","Cinéma Le Colisée","Cinéma Amilcar Hannibal").forEach(c->{
              Cinema cinema =new Cinema();
              cinema.setName(c);
              cinema.setNombreSalles((int) (3+Math.random()*7));
@@ -137,7 +137,7 @@ public class CinemaInitServiceImpl implements IinterfaceInitCinema {
                       projection.setSalle(s);
                       projection.setSeance(se);
                       projectionRepository.save(projection);
-                     });
+                       });
                     });
                 });
             });
